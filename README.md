@@ -11,3 +11,4 @@ File structure
 
 These folders will be continualy updated as files are added. 
 
+They .py files need python3 to run and need numpy and matplotlib 
