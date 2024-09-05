@@ -2,9 +2,9 @@ import numpy as np
 import numpy.linalg as la
 import math
 def driver():
-    m = 4
-    n = 5
-    p = 4
+    m = 100
+    n = 100
+    p = 100
     x = np.random.rand(m,n)
     y = np.random.rand(n,p)
 
