@@ -5,8 +5,8 @@ def driver():
     m = 4
     n = 4
     p = 4
-    x = np.random.rand(4,4)
-    y = np.random.rand(4,4)
+    x = np.random.rand(m,n)
+    y = np.random.rand(n,p)
 
     # evaluate the dot product of y and w
     dp = matrixVectMult(x, y, m, n, p)
