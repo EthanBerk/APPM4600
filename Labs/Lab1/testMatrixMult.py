@@ -3,7 +3,7 @@ import numpy.linalg as la
 import math
 def driver():
     m = 4
-    n = 4
+    n = 5
     p = 4
     x = np.random.rand(m,n)
     y = np.random.rand(n,p)
