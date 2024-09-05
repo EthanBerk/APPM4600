@@ -11,10 +11,10 @@ def driver():
     # evaluate the dot product of y and w
     dp = matrixVectMult(x, y, m, n, p)
     # print the output
-    print('matrix vector multplication is : ', dp)
+    print('matrix vector multiplication is : ', dp)
     return
 def matrixVectMult(x, y, m, n, p):
-    # Computes matrix vector multplication beetween matrix x(m, n) and matrix y(n,p) 
+    # Computes matrix vector multiplication between matrix x(m, n) and matrix y(n,p) 
 
     f = np.empty((m,p));
     for i in range(p):
