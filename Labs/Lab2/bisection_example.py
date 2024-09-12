@@ -3,16 +3,39 @@ import numpy as np
 
 def driver():
 
-# use routines    
-    f = lambda x: x**3+x-4
-    a = 1
-    b = 4
 
-#    f = lambda x: np.sin(x)
-#    a = 0.1
-#    b = np.pi+0.1
+    # # 1.a
+    # f = lambda x:  x**2 *(x-1)
+    # a = 0.5
+    # b = 2
 
-    tol = 1e-7
+    # # 1.b
+    # f = lambda x:  x**2 *(x-1)
+    # a = -1
+    # b = 0.5
+
+    # # 1.c
+    # f = lambda x: x**2 * (x-1)
+    # a = -1
+    # b = 2
+
+    # # 2.a
+    # f = lambda x: (x-1)(x-3)(x-5)
+    # a = 0
+    # b = 2.4
+    
+    # # 2.b
+    # f = lambda x: (x-1)^2(x-3)
+    # a = 0
+    # b = 2
+
+    # 2.c
+    f = lambda x: np.sin(x)
+    a = 0
+    b = 0.1
+
+
+    tol = 1e-5
 
     [astar,ier] = bisection(f,a,b,tol)
     print('the approximate root is',astar)
