@@ -1,5 +1,6 @@
 # import libraries
 import numpy as np
+
     
 def driver():
 
@@ -8,34 +9,32 @@ def driver():
      Nmax1 = 100;
 # Tolerance
      tol = 1e-10
-     
-     
 
+#find actual roots
 
-
-# find fixed point 1 -0.898357
+# find fixed point 1 
      x1 = -.9
      [xstar,ier] = fixedpt(f,x1,tol,Nmax1)
      print('the approximate fixed point 1 is:',xstar)
      print('f(xstar):',f(xstar))
      print('Error message reads:',ier)
     
-# find fixed point 2 -0.898357
+# find fixed point 2 
      x2 = -.5
      [xstar,ier] = fixedpt(f,x2,tol,Nmax1)
      print('the approximate fixed point 2 is:',xstar)
      print('f(xstar):',f(xstar))
      print('Error message reads:',ier)
      
-# find fixed point 3 1.73207
+# find fixed point 3 
      x3 = 1.7
      [xstar,ier] = fixedpt(f,x3,tol,Nmax1)
      print('the approximate fixed point 3 is:',xstar)
      print('f(xstar):',f(xstar))
      print('Error message reads:',ier)
      
-# find fixed point 4 3.16183
-     x4 = 3
+# find fixed point 4 
+     x4 = 4.5
      [xstar,ier] = fixedpt(f,x4,tol,Nmax1)
      print('the approximate fixed point 4 is:',xstar)
      print('f(xstar):',f(xstar))
