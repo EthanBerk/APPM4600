@@ -1,17 +1,19 @@
 # import libraries
 import numpy as np
+import scipy as sp
 
 def driver():
 
-    # 2.c
-    f = lambda x: np.sin(x) - 2* x + 1
-    a = 0
-    b = np.pi
-    tol = 1e-8
 
-    [astar, ier, count] = bisection(f,a,b,tol)
+
+    # 2.c
+    f = lambda x: sp.special.erf(x / (2 * np.sqrt(0.138e-6 * 5.184e6)))*(35) - 15 
+    a = 0
+    b = 1
+    tol = 1e-13
+
+    [astar,ier] = bisection(f,a,b,tol)
     print('the approximate root is',astar)
-    print('The iteration count is', count)
     print('the error message reads:',ier)
     print('f(astar) =', f(astar))
 
@@ -33,8 +35,7 @@ def bisection(f,a,b,tol):
 
 #     first verify there is a root we can find in the interval 
 
-    
-    fa = f(a);
+    fa = f(a)
     fb = f(b);
     if (fa*fb>0):
        ier = 1
@@ -71,7 +72,7 @@ def bisection(f,a,b,tol):
       
     astar = d
     ier = 0
-    return [astar, ier, count]
+    return [astar, ier]
       
 driver()               
 
