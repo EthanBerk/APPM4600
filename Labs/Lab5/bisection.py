@@ -8,6 +8,8 @@ def driver():
     f = lambda x: np.exp(x**2+7*x-30)-1
     a = 2   
     b = 4.5
+    
+    
 
 
     tol = 1e-5
