@@ -21,13 +21,15 @@ def main():
     print("evaluate:", f(xcurve))
     print('the error message reads:',ier) 
     print('number of iterations is:',its)
+    print('the errors are:', np.array(list(map(lambda p: norm(p- xcurve), p))))
     
     
 def iteration(x0, d, fx, fy, fz, tol, Nmax):
     
-    p = np.zeros(Nmax+1);
+    p = [];
 
     for its in range(Nmax):
+       p.append(x0)
        x1 = x0 - d(x0) * np.array([fx(x0), fy(x0), fz(x0)])
        
        if (norm(x1-x0) < tol):
