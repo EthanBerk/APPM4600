@@ -1,9 +1,14 @@
 {
     "cSpell.words": [
         "fixedpt",
+        "jint",
+        "Nint",
         "Nmax",
         "pstar",
         "xcurve",
-        "xstar"
+        "xeval",
+        "xint",
+        "xstar",
+        "yeval"
     ]
 }

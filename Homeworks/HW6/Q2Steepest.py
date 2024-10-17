@@ -10,12 +10,12 @@ def driver():
 
     Nmax = 100
     x0= np.array([0,0,0])
-    tol = 1e-20
+    tol = 1e-5
     
-    [xstar,gval,ier] = SteepestDescent(x0,tol,Nmax)
-    print("the steepest descent code found the solution ",xstar)
-    print("g evaluated at this point is ", gval)
-    print("ier is ", ier	)
+    [xstar,gval,ier,its] = SteepestDescent(x0,tol,Nmax)
+    print(xstar)
+    print("Steepest decent: the error message reads ",ier)
+    print("Steepest decent: number of iterations is ",its)
 
 ###########################################################
 #functions:
@@ -78,7 +78,7 @@ def SteepestDescent(x,tol,Nmax):
         if alpha3<tol:
             print("no likely improvement")
             ier = 0
-            return [x,g1,ier]
+            return [x,g1,ier, its]
         
         alpha2 = alpha3/2
         dif_vec = x - alpha2*z
@@ -104,11 +104,11 @@ def SteepestDescent(x,tol,Nmax):
 
         if abs(gval - g1)<tol:
             ier = 0
-            return [x,gval,ier]
+            return [x,gval,ier,its]
 
     print('max iterations exceeded')    
     ier = 1        
-    return [x,g1,ier]
+    return [x,g1,ier,its]
 
 
 

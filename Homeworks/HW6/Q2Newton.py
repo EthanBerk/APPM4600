@@ -6,8 +6,6 @@ from numpy.linalg import norm
 
 def driver():
 
-    # x0 = np.array([1, 1])
-    # x0 = np.array([1, -1])
     x0 = np.array([0, 0, 0])
     
     Nmax = 100
