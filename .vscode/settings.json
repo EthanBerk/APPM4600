@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
+        "Chebychev",
         "fixedpt",
         "jint",
+        "Neval",
         "Nint",
         "Nmax",
         "pstar",
@@ -9,6 +11,8 @@
         "xeval",
         "xint",
         "xstar",
-        "yeval"
+        "yeval",
+        "yint",
+        "ypint"
     ]
 }
